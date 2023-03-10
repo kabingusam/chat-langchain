@@ -1,0 +1,65 @@
+ body{
+    /* fallback for old browsers */
+background: #fccb90; 
+
+ }
+ 
+ .chat-body {
+     width: 800px;
+     margin: 50px auto;
+ }
+
+ .card-body {
+     /* background-color: #333; */
+     background: rgba(24, 24, 16, .2);
+     color: #fff;
+     border-radius: 10px;
+ }
+ .card-body p {
+    font-family: cursive;
+ }
+
+ .server-message {
+     background-color: #444;
+     padding: 10px;
+     margin: 10px;
+     border-radius: 10px;
+ }
+
+ .client-message {
+     background-color: #555;
+     padding: 10px;
+     margin: 10px;
+     border-radius: 10px;
+ }
+
+ .form-inline {
+     display: flex;
+     justify-content: space-between;
+ }
+
+ .form-control {
+     width: 80%;
+     background-color: #333;
+     color: #fff;
+     border: none;
+     border-radius: 5px;
+     padding: 10px;
+     margin-right: 10px;
+ }
+
+ #send {
+     background: rgba(24, 24, 16, .2);
+     color: #fff;
+     border: none;
+     border-radius: 5px;
+     padding: 10px 20px;
+ }
+
+ .form-message {
+     margin-top: 10px;
+ }
+
+ h4 {
+    font-family: cursive;
+ }

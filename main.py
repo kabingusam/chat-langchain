@@ -12,9 +12,14 @@ from callback import QuestionGenCallbackHandler, StreamingLLMCallbackHandler
 from query_data import get_chain
 from schemas import ChatResponse
 
+from fastapi.staticfiles import StaticFiles
+
 app = FastAPI()
 templates = Jinja2Templates(directory="templates")
 vectorstore: Optional[VectorStore] = None
+
+# Mount the static directory to serve static files
+app.mount("/static", StaticFiles(directory="static"), name="static")
 
 
 @app.on_event("startup")
