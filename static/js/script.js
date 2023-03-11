@@ -68,3 +68,4 @@ function sendMessage(event) {
     button.innerHTML = "Loading...";
     button.disabled = true;
 }
+

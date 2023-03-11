@@ -12,20 +12,25 @@
 
 <body>
     <div class="chat-body card">
-        <div class="card-body p-5">
-            <h4 class="card-title text-center text-xl font-medium">
-                Weed Chat
-                <img src="{{ url_for('static', path='images/weed.png') }}" style="width: 75px; height: 75px; margin-left: 10px;">
-            </h4>
-            <p class="card-text text-center text-sm" id="header"> Ask a question </p>
-            <hr class="border-gray-500 mb-5" style="margin-top: 20px;">
-            <div id="messages" class="overflow-auto" style="max-height: 500px;">
-            </div>
-            <form action="" class="form-inline mt-5" id="chat-form" onsubmit="sendMessage(event)">
-                <input type="text" class="form-control" placeholder="Write your question" id="messageText">
-                <button id="send" type="submit" class="btn btn-primary">Send</button>
-            </form>
-        </div>
+    <div class="card-body p-5">
+        <h4 class="card-title text-center text-xl font-medium">
+            Weed Chat
+            <img src="{{ url_for('static', path='images/weed.png') }}" style="width: 75px; height: 75px; margin-left: 10px;">
+        </h4>
+        <p class="card-text text-center text-sm" id="header"> Ask a question </p>
+        <hr class="border-gray-500 mb-5" style="margin-top: 20px;">
+        <div id="messages" class="overflow-auto" style="max-height: 500px;"></div>
+        <form action="" class="form-inline mt-5" id="chat-form" onsubmit="sendMessage(event)">
+            <input type="text" class="form-control" placeholder="Write your question" id="messageText">
+            <button id="send" type="submit" class="btn btn-primary">Send</button> <br>
+            <button id="clear-chats" class="btn btn-danger" style="background: rgba(24, 24, 16, .2); color: #fff; border: none; border-radius: 5px; padding: 10px 20px; margin-left: 10px">Clear!</button>
+        </form>
     </div>
+</div>
+<script>
+    document.getElementById("clear-chats").addEventListener("click", function() {
+        document.getElementById("messages").innerHTML = "";
+    });
+</script>
 </body>
 </html>
