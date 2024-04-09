@@ -23,6 +23,7 @@ def ingest_docs(urls):
     # Save vectorstore
     with open("vectorstore.pkl", "wb") as f:
         pickle.dump(vectorstore, f)
+        
 
 if __name__ == "__main__":
     urls = [
